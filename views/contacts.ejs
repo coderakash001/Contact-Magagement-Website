@@ -1,0 +1,20 @@
+<%- include('./partials/header') %>
+
+<%- include('./partials/nav') %>
+<div class="p-5 flex justify-start gap-6">
+<% contacts.forEach(function(contact, index){ %>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= contact.name %></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"><%= contact.email %></h6>
+          <p class="card-text"><%= contact.address %></p>
+          <p class="card-text"><%= contact.contact %></p>
+          <a href="/edit/<%= contact._id %>" class="card-link text-blue-700">Edit</a>
+          <a href="/delete/<%= contact._id %>" class="card-link text-red-700">Delete</a>
+        </div>
+      </div>
+
+<% }) %>
+
+</div>
+<%- include('./partials/footer') %>

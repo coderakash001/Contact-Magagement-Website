@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+
+<%- include('./partials/nav') %>
+<div class="w-[100%] h-[90vh] flex justify-center items-center ">
+    <form class="flex-col" action="/createContact" method="post">
+        <input class="text-center border-2 px-3 py-1" type="text" name="name" placeholder="Enter Name"> <br><br>
+        <input class="text-center border-2 px-3 py-1" type="email" name="email" placeholder="Enter Email"><br><br>
+        <input class="text-center border-2 px-3 py-1" type="text" name="contact" placeholder="Enter contact"><br><br>
+        <input class="text-center border-2 px-3 py-1" type="text" name="address" placeholder="Enter address"><br><br>
+        <button class="px-14 py-2 bg-purple-400 rounded m-auto ml-6">create contact</button>
+    </form>
+</div>
+
+
+<%- include('./partials/footer') %>

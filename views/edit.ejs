@@ -1,0 +1,14 @@
+<%- include('./partials/header') %>
+
+<%- include('./partials/nav') %>
+<div class="w-[100%] h-[90vh] flex justify-center items-center">
+<form action="/update/<%= currentContact._id %>" method="post">
+    <input class="text-center border-2 px-3 py-1" value="<%= currentContact.name %>" type="text" name="name" placeholder="Enter Name"> <br><br>
+    <input class="text-center border-2 px-3 py-1" value="<%= currentContact.email %>" type="email" name="email" placeholder="Enter email"><br><br>
+    <input class="text-center border-2 px-3 py-1" value="<%= currentContact.contact %>" type="text" name="contact" placeholder="Enter contact"><br><br>
+    <input class="text-center border-2 px-3 py-1" value="<%= currentContact.address %>" type="text" name="address" placeholder="Enter address"><br><br>
+    <button class="px-14 py-2 bg-purple-400 ">update contact</button>
+</form>
+</div>
+
+<%- include('./partials/footer') %>
